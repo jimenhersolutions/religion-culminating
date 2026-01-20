@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faith vs Power - Religion Culminating Project</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+        
+        /* Fuentes temáticas */
+        .font-title { font-family: 'Cinzel', serif; }
+        .font-body { font-family: 'Libre Baskerville', serif; }
+        
+        /* Paleta de Colores Personalizada */
+        :root {
+            --royal-red: #5c0909;     
+            --sacred-gold: #c5a059;   
+            --parchment: #fdfbf7;     
+            --ink: #2b2b2b;           
+            --dark-bg: #1a0505;       
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--ink);
+            line-height: 1.9;
+            background-image: url("https://i.imgur.com/CMnQV2K.png");
+            background-blend-mode: overlay;
+            scroll-behavior: smooth;
+        }
+
+        .article-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 40px;
+            background-color: var(--parchment);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5); 
+            min-height: 100vh;
+            border: 1px solid #e0e0e0;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cinzel', serif;
+        }
+
+        .hero-image {
+            width: calc(100% + 80px);
+            margin-left: -40px;
+            height: 400px;
+            object-fit: cover;
+            border-bottom: 4px solid var(--sacred-gold);
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        }
+
+        .dropcap {
+            float: left;
+            font-size: 4.5rem;
+            line-height: 0.8;
+            padding: 0.1em 0.1em 0 0;
+            color: var(--royal-red);
+            font-family: 'Cinzel', serif;
+            font-weight: 900;
+            text-shadow: 2px 2px 0px rgba(197, 160, 89, 0.3);
+        }
+
+        .highlight-box {
+            background: linear-gradient(to right, #fffdf5, #fff);
+            border-left: 6px solid var(--sacred-gold);
+            border-right: 1px solid #eee;
+            padding: 2.5rem;
+            font-style: italic;
+            margin: 3rem 0;
+            position: relative;
+            color: var(--royal-red);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .highlight-box::before {
+            content: "“";
+            font-family: 'Cinzel', serif;
+            font-size: 5rem;
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            color: rgba(197, 160, 89, 0.2);
+        }
+
+        .img-hover-zoom {
+            overflow: hidden;
+            border-bottom: 3px solid var(--sacred-gold);
+        }
+        .img-hover-zoom img {
+            transition: transform 0.5s ease;
+        }
+        .img-hover-zoom:hover img {
+            transform: scale(1.1);
+        }
+        
+        .scripture-card {
+            background-color: #f9f4e8;
+            border: 1px solid #eaddcf;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .scripture-card::after {
+            content: '♰';
+            position: absolute;
+            bottom: -20px;
+            right: -10px;
+            font-size: 8rem;
+            color: rgba(92, 9, 9, 0.03);
+        }
+
+        .wealth-section {
+            background-color: #f3ece0;
+            border: 1px solid var(--sacred-gold);
+            padding: 2.5rem;
+            margin: 3rem 0;
+            position: relative;
+        }
+    </style>
+</head>
+<body class="font-body">
+
+    <!-- Navegación Flotante -->
+    <nav class="sticky top-0 bg-[#5c0909] text-[#c5a059] shadow-2xl z-50 border-b border-[#c5a059]">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-2 text-lg font-bold tracking-widest font-title">
+                <span class="text-2xl">☧</span> F / P
+            </div>
+            <div class="flex space-x-6 text-xs uppercase md:space-x-8 md:text-sm font-title tracking-widest">
+                <a href="#introduction" class="transition duration-300 hover:text-white">Intro</a>
+                <a href="#teachings" class="transition duration-300 hover:text-white">Teachings</a>
+                <a href="#definition" class="transition duration-300 hover:text-white">The Church</a>
+                <a href="#analysis" class="transition duration-300 hover:text-white">Analysis</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="relative article-container">
+        
+        <!-- Imagen de Inicio -->
+        <img src="https://i.imgur.com/CMnQV2K.png" alt="[Imagen de inicio de catedral]" class="hero-image">
+
+        <header class="py-12 text-center">
+            <h1 class="font-title text-sm font-bold uppercase tracking-[0.4em] text-[#c5a059] mb-6">
+                Religious Education Culminating
+            </h1>
+            <h2 class="font-title text-5xl md:text-7xl font-bold text-[#5c0909] mb-8 leading-none drop-shadow-sm">
+                Faith <span class="text-[#c5a059] text-4xl align-middle italic font-serif mx-2">&</span> Power
+            </h2>
+            <div class="flex items-center justify-center space-x-4 opacity-70">
+                <div class="h-[1px] w-20 bg-[#c5a059]"></div>
+                <div class="text-[#5c0909] text-2xl">✤</div>
+                <div class="h-[1px] w-20 bg-[#c5a059]"></div>
+            </div>
+        </header>
+
+        <main class="px-4 pb-12 md:px-8">
+            
+            <!-- Section: Introduction -->
+            <article id="introduction" class="mb-20 text-lg md:text-xl text-gray-800">
+                <div class="mb-10 text-center">
+                    <h3 class="font-title text-[#5c0909] text-2xl inline-block border-b-2 border-[#c5a059] pb-2 px-8">
+                        I. The Foundation
+                    </h3>
+                </div>
+
+                <p class="mb-8 text-justify">
+                    <span class="dropcap">T</span>he Christian Church was founded on the teachings of Jesus of Nazareth—a figure who rejected wealth, authority, and political dominance in favor of humility, service, and compassion. Jesus spoke of leadership not as control, but as self-giving love, teaching that <span class="text-[#5c0909] font-bold">“whoever wants to be first must be servant of all.”</span> However, as Christianity grew and became institutionalized, the Church began to accumulate power, influence, and authority within society.
+                </p>
+                
+                <p class="mb-8 text-justify">
+                    Throughout history, the Church transformed from a small community of believers into one of the most powerful institutions in the world. With this transformation came structure, hierarchy, and political involvement—but also deep moral tension.
+                </p>
+                
+                <div class="shadow-md highlight-box rounded-r-lg">
+                    <p class="relative z-10 text-xl font-bold leading-relaxed font-body md:text-2xl">
+                        This project explores the conflict between faith and institutional power within the Christian Church, examining how the pursuit of authority has distanced the institution from its original spiritual mission.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Section: The Teachings of Jesus -->
+            <section id="teachings" class="pt-10 mb-24 border-t border-[#eaddcf]">
+                <h3 class="font-title text-[#5c0909] text-2xl mb-8 text-center uppercase tracking-widest">The Teachings of Jesus</h3>
+                
+                <div class="grid items-start gap-10 md:grid-cols-2">
+                    <div class="relative overflow-hidden rounded shadow-xl">
+                        <img src="https://i.imgur.com/UhyTG1Y.png" alt="[Imagen de un camino en la naturaleza]" class="w-full h-auto">
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#5c0909]/40"></div>
+                    </div>
+                    
+                    <div class="space-y-6 text-lg text-gray-700">
+                        <p>
+                            Jesus’ ministry was defined by a radical reversal of social norms. While the world of his time—much like our own—valued status and dominance, his message was centered on the <b>Kingdom of God</b>, a reality where the "last shall be first."
+                        </p>
+                        
+                        <div class="p-6 italic rounded shadow-inner scripture-card border-l-4 border-[#5c0909]">
+                            <p class="mb-2">"But among you it will be different. Whoever wants to be a leader among you must be your servant."</p>
+                            <span class="block text-right font-title text-sm text-[#5c0909]">— Matthew 20:26</span>
+                        </div>
+
+                        <ul class="space-y-3 list-none">
+                            <li class="flex items-start gap-3">
+                                <span class="text-[#c5a059] font-bold">◈</span>
+                                <span><b>Non-Violence:</b> He taught to love enemies and pray for persecutors, rejecting the sword as a means of victory.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-[#c5a059] font-bold">◈</span>
+                                <span><b>Poverty of Spirit:</b> He identified with the marginalized, the poor, and the outcast, warning that riches often hinder spiritual growth.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sub-section: Jesus and Wealth -->
+                <div class="wealth-section">
+                    <h4 class="font-title text-[#5c0909] text-xl mb-4 border-b border-[#c5a059] pb-2">Jesus on Wealth and Possession</h4>
+                    <div class="space-y-4 text-gray-800">
+                        <p>
+                            Perhaps one of the most challenging aspects of Jesus' teaching was his perspective on wealth. He did not view money as inherently evil, but rather as a <b>rival to God</b> for the human heart. He famously stated: <i>"No one can serve two masters... You cannot serve both God and Money"</i> (Matthew 6:24).
+                        </p>
+                        <p>
+                            For Jesus, wealth often acted as a barrier to the "narrow gate" of spiritual liberation. He challenged the rich young ruler to sell everything and give to the poor, not as a punishment, but as a way to find true treasure. He viewed wealth not as something to be accumulated for security or status, but as a resource for <b>radical generosity</b>.
+                        </p>
+                        <div class="grid gap-6 mt-6 md:grid-cols-2">
+                            <div class="p-4 bg-white/50 border-t-2 border-[#5c0909]">
+                                <h5 class="mb-2 text-sm font-bold font-title uppercase tracking-tighter text-[#5c0909]">The Camel and the Needle</h5>
+                                <p class="text-sm italic">"It is easier for a camel to go through the eye of a needle than for someone who is rich to enter the kingdom of God."</p>
+                            </div>
+                            <div class="p-4 bg-white/50 border-t-2 border-[#5c0909]">
+                                <h5 class="mb-2 text-sm font-bold font-title uppercase tracking-tighter text-[#5c0909]">The Rich Fool</h5>
+                                <p class="text-sm italic">A warning against building bigger barns for oneself while being "not rich toward God."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Defining the Church -->
+            <section id="definition" class="pt-10 mb-24 border-t border-[#eaddcf]">
+                <div class="grid items-center gap-10 md:grid-cols-2">
+                    <div>
+                        <h3 class="font-title text-[#5c0909] text-2xl mb-6">What is the Church?</h3>
+                        <div class="space-y-4 text-lg leading-relaxed text-gray-700">
+                            <p>
+                                Beyond the stone walls and towering spires, the word "Church" originates from the Greek <i>ekklesia</i>, meaning a "called-out assembly." In its purest theological sense, the Church is not a building or a political entity, but a community of people united by faith and a shared commitment to the Gospel.
+                            </p>
+                            <p>
+                                It is described as the <b>Body of Christ</b>, intended to be a living vessel of God's love, mercy, and justice on Earth. However, throughout the centuries, the definition has evolved to include the <b>Institution</b>—the organized structure of hierarchy, laws, and traditions that manage the global community of believers.
+                            </p>
+                            <p class="italic border-l-4 border-[#c5a059] pl-4 py-2 bg-white">
+                                The duality of the Church lies here: it is both a spiritual fellowship and a human institution, susceptible to the same hunger for power that Jesus once warned against.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <div class="absolute transition duration-1000 rounded opacity-25 -inset-2 bg-[#c5a059]/20 blur group-hover:opacity-50"></div>
+                        <div class="relative p-2 bg-white border shadow-2xl border-[#c5a059]">
+                            <img src="https://images.unsplash.com/photo-1438032005730-c779502df39b?auto=format&fit=crop&q=80&w=600" alt="[Imagen de congregación]" class="transition duration-700 grayscale hover:grayscale-0">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Historical Wealth Accumulation -->
+            <section id="analysis" class="pt-10 mt-24 border-t border-gray-200">
+                <div class="mb-16 text-center">
+                    <span class="block mb-4 text-5xl animate-pulse text-[#c5a059]">❖</span>
+                    <h3 class="font-title text-[#5c0909] text-3xl font-bold uppercase tracking-widest">Historical Accumulation</h3>
+                    <p class="text-gray-500 font-title text-sm mt-2 uppercase tracking-wide">When the Institution Mirrored the Empire</p>
+                </div>
+                
+                <div class="grid gap-10 md:grid-cols-3">
+                    <!-- Item 1: Medieval Land -->
+                    <div class="p-4 bg-white border border-gray-100 shadow-xl group">
+                        <div class="relative h-56 mb-4 img-hover-zoom">
+                            <img src="https://i.imgur.com/YrLluvB.png" class="object-cover w-full h-full" alt="[Imagen de monasterio medieval]">
+                            <div class="absolute top-2 left-2 bg-white/90 px-3 py-1 font-title font-bold text-[#5c0909]">I</div>
+                        </div>
+                        <h4 class="font-title text-lg font-bold text-[#5c0909] mb-2 group-hover:text-[#c5a059] transition">The Feudal Landowner</h4>
+                        <p class="text-sm leading-relaxed text-gray-600">
+                            By the High Middle Ages, the Church was the largest landowner in Europe. Through tithes and bequests, monasteries amassed immense wealth in land and production, often wielding more economic power than local kings.
+                        </p>
+                    </div>
+
+                    <!-- Item 2: Renaissance Splendor -->
+                    <div class="p-4 bg-white border border-gray-100 shadow-xl group mt-0 md:-mt-8">
+                        <div class="relative h-56 mb-4 img-hover-zoom">
+                            <img src="https://i.imgur.com/LTWNN8T.jpeg" class="object-cover w-full h-full" alt="[Image of St. Peter's Basilica]">
+                            <div class="absolute top-2 left-2 bg-white/90 px-3 py-1 font-title font-bold text-[#5c0909]">II</div>
+                        </div>
+                        <h4 class="font-title text-lg font-bold text-[#5c0909] mb-2 group-hover:text-[#c5a059] transition">Renaissance Splendor</h4>
+                        <p class="text-sm leading-relaxed text-gray-600">
+                            The papacy became a patron of the arts, commissioning grand works like St. Peter's Basilica. To fund this, the Church monetized spiritual grace through the sale of "indulgences," a practice that sparked the Protestant Reformation.
+                        </p>
+                    </div>
+
+                    <!-- Item 3: Colonial Expansion -->
+                    <div class="p-4 bg-white border border-gray-100 shadow-xl group">
+                        <div class="relative h-56 mb-4 img-hover-zoom">
+                            <img src="https://i.imgur.com/IEMwvBo.png" class="object-cover w-full h-full" alt="[Imagen de iglesia colonial]">
+                            <div class="absolute top-2 left-2 bg-white/90 px-3 py-1 font-title font-bold text-[#5c0909]">III</div>
+                        </div>
+                        <h4 class="font-title text-lg font-bold text-[#5c0909] mb-2 group-hover:text-[#c5a059] transition">Imperial Expansion</h4>
+                        <p class="text-sm leading-relaxed text-gray-600">
+                            During the colonial era, the Church expanded alongside empires into the Americas and Asia. Missions often controlled vast resources and territories, intertwining the mission of evangelization with material extraction.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Service to the People -->
+            <section id="service" class="pt-10 mt-24 border-t border-[#eaddcf]">
+                <div class="grid items-center gap-10 md:grid-cols-2">
+                    <div class="order-2 md:order-1">
+                        <div class="relative group">
+                            <div class="absolute transition duration-1000 rounded opacity-25 -inset-2 bg-[#c5a059]/20 blur group-hover:opacity-50"></div>
+                            <div class="relative p-2 bg-white border shadow-2xl border-[#c5a059]">
+                                <img src="https://i.imgur.com/bI2SoRX.png" alt="[Imagen de biblioteca antigua]" class="transition duration-700 grayscale hover:grayscale-0">
+                                <div class="absolute bottom-4 left-4 right-4 bg-white/90 p-2 text-xs font-title text-center text-[#5c0909]">
+                                    Preserving Knowledge & Healing the Sick
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="order-1 md:order-2">
+                        <h3 class="font-title text-[#5c0909] text-2xl mb-6">Wealth as a Social Safety Net</h3>
+                        <div class="space-y-4 text-lg leading-relaxed text-gray-700">
+                            <p>
+                                However, it is historically inaccurate to view Church wealth solely as corruption. For centuries, before the existence of modern governments and welfare states, the Church was the primary provider of <b>social services</b> in the Western world.
+                            </p>
+                            <p>
+                                The immense resources collected through tithes were often redistributed to fund the first <b>hospitals</b> (like the Hôtel-Dieu in Paris), orphanages, and almshouses. Monasteries served not only as spiritual retreats but as centers of agricultural innovation and food distribution during famines.
+                            </p>
+                            
+                            <div class="bg-[#f9f4e8] p-5 border-l-4 border-[#5c0909] mt-6 shadow-sm">
+                                <h5 class="font-title text-sm font-bold uppercase tracking-widest text-[#5c0909] mb-2 flex items-center gap-2">
+                                    <span class="text-xl">🎓</span> The Foundation of Education
+                                </h5>
+                                <p class="text-sm italic text-gray-800">
+                                    Church wealth also laid the groundwork for the modern university system. Institutions like Oxford, Cambridge, and the University of Bologna were born from cathedral schools, funded by ecclesiastical endowments to preserve literacy, science, and philosophy when few others could.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Conclusion -->
+            <section id="conclusion" class="pt-16 mt-20 border-t-2 border-[#5c0909] text-center">
+                <div class="max-w-3xl mx-auto">
+                    <span class="text-[#c5a059] text-4xl block mb-6">Ω</span>
+                    <h3 class="font-title text-[#5c0909] text-3xl font-bold uppercase tracking-widest mb-8">The Enduring Paradox</h3>
+                    
+                    <p class="text-lg md:text-xl text-gray-800 leading-relaxed italic font-body mb-8">
+                        "The history of the Church cannot be reduced to a single narrative of corruption or sanctity. It is, instead, a profound paradox."
+                    </p>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-6 text-justify">
+                        While the institution has at times succumbed to the very temptations of power that Jesus warned against, it has also served as the primary vessel for his message of love and service to endure through millennia. The wealth that built cathedrals also built hospitals; the authority that waged wars also mediated peace.
+                    </p>
+                    
+                    <p class="text-gray-700 leading-relaxed text-justify">
+                        Ultimately, the tension between faith and power is not a problem that was solved in the past, but a constant balance to be maintained in the present. It stands as a reminder that the true Church exists not in gold or stone, but in the continual, imperfect effort to align human institutions with divine ideals.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-[#2b2b2b] text-[#fdfbf7] py-12 px-6 mt-20 relative overflow-hidden text-center">
+            <div class="w-full h-1 bg-[#c5a059] absolute top-0 left-0"></div>
+            <h5 class="font-title text-xl uppercase tracking-[0.2em] text-[#c5a059] mb-2">Faith vs Power</h5>
+            <div class="mb-4 inline-block px-8 py-2 border border-[#c5a059]/30 rounded-full">
+                <p class="text-sm font-title text-[#c5a059] tracking-widest">By Carlos Jimenz</p>
+            </div>
+            <p class="text-xs text-gray-500 font-title uppercase tracking-widest">
+                Religious Education Department &bull; 2024
+            </p>
+        </footer>
+    </div>
+    <div class="h-20"></div>
+</body>
+</html>
